@@ -15,13 +15,9 @@ consume = (a, b, cb) => {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-add = (a, b) => {
-  return a + b;
-}
+add = (a, b) => a + b;
 
-multiply = (a, b) => {
-  return a * b;
-}
+multiply = (a, b) => a * b;
 
 greeting = (firstName, lastName) => {
   return `Hello ${firstName} ${lastName}, nice to meet you!`;
@@ -37,8 +33,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: Because of the closure that is created by calling nestedFunction inside of myFunction. When nestedFunction is called, it has access to the variable internal because it was declared within myFunction and before nestedFunction was called (i.e., it was part of the lexical environment)
-
+// Explanation: Because of the closure that is created by calling nestedFunction inside of myFunction. When nestedFunction is called, it has access to the variable internal because it was declared within myFunction and before nestedFunction was called (i.e., it was part of the lexical environment).
 
 const external = "I'm outside the function";
 

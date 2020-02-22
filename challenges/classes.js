@@ -5,15 +5,18 @@ class CuboidMaker {
     this.width = width;
     this.height = height;
   }
+
   volume() {
     return this.length * this.width * this.height;
   }
+
   surfaceArea = function() {
     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 }
 
 let cuboid = new CuboidMaker(4, 5, 5);
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
@@ -24,9 +27,11 @@ class CubeMaker extends CuboidMaker {
   constructor(length) {
     super(length, length, length);
   }
-  // formula for volume of cube is same as cuboid
-  // don't need to redefine volume method here
-  
+  // formula for volume of cube is same as cuboid, don't really need to redefine volume method here
+  volume() {
+    return this.length ** 3;
+  }
+
   surfaceArea() {
     return 6 * this.length ** 2;
   }
